@@ -48,7 +48,7 @@ nav {
     flex-direction: column;
     z-index: 1;
     gap: 23px;
-    padding: 23px;
+    padding: 80px;
 }
 
 .hero> :nth-child(1) {
@@ -73,4 +73,24 @@ nav {
     font-size: 20px;
     color: #ffffff;
     text-align: center;
+}
+ 
+.seperation{
+    height: 5px;
+    background-color: gray;
+    opacity: 1;
+}
+
+.btn{
+    padding: 8px 25px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    overflow: hidden;
+}
+.btn-red-sm{
+    padding: 8px 15px;
+    background-color: red;
+    border-radius: 0.25rem;
+    color: white;
+
 }
