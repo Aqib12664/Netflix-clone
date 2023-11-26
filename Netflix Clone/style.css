@@ -1,96 +1,308 @@
 * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
+::-webkit-slider-thumb {}
+
 body {
-    background-color: black;
+  background-color: black;
+  overflow-x: hidden;
+  color: white;
 }
 
 /* Header and nav */
-header {
-    background-color: rgba(0, 0, 0, 0.438);
-    background: url(/assests/img/bg.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: max(750px, 100vw);
-    width: 100%;
-    height: 77vh;
-    position: relative;
+.main {
+  height: 70vh;
+  background: url("assests/img/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: max(750px, 100vw);
 }
 
-header .box {
-    width: 100%;
-    height: 77vh;
-    background-color: rgba(0, 0, 0, 0.67);
-    position: absolute;
+.content-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: auto;
+  flex: row;
+  padding: 15px;
+  margin: 10px;
 }
 
 nav {
-    max-width: 80vw;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 55px;
-    padding: 43px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+nav button {
+  margin-right: 10px;
+}
+
+#btn-signIN {
+  padding: 10px 15px;
+  background-color: red;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+#btn-signIN:hover {
+  background-color: rgba(255, 0, 0, 0.555);
+}
+
+.btn {
+  padding: 8px 25px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+  overflow: hidden;
+}
+ .btne {
+  padding: 8px 25px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+} 
 
 .hero {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-direction: column;
-    z-index: 1;
-    gap: 23px;
-    padding: 80px;
+  color: white;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
 }
 
-.hero> :nth-child(1) {
-    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
-    font-weight: 900;
-    font-size: 48px;
-    color: #ffffff;
-    text-align: center;
+.hero h1 {
+  font-size: 50px;
+  margin: 10px 0;
 }
 
-.hero> :nth-child(2) {
-    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    color: #ffffff;
-    text-align: center;
+.sub-head {
+  font-size: 30px;
+  margin: 10px 0;
 }
 
-.hero> :nth-child(3) {
-    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-}
- 
-.seperation{
-    height: 5px;
-    background-color: gray;
-    opacity: 1;
+.recomendation {
+  font-size: 20px;
+  margin: 10px 0;
 }
 
-.btn{
-    padding: 8px 25px;
-    border: 1px solid rgba(255, 255, 255, 0);
-    cursor: pointer;
-    overflow: hidden;
+.main-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
 }
-.btn-red-sm{
-    padding: 8px 15px;
-    background-color: red;
-    border-radius: 0.25rem;
-    color: white;
+
+.email-input {
+  padding: 14px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 60%;
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  color: white;
+  margin: 8px;
+}
+
+.email-input:focus {
+  outline: 2px solid white;
+}
+
+.main-input-container button {
+  padding: 15px;
+  background-color: red;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
+.main-input-container button:hover {
+  background-color: rgba(255, 0, 0, 0.555);
+}
+
+.seperation {
+  background-color: #80808059;
+  height: 6px;
+}
+
+
+/* section first */
+.first {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin: auto;
+  max-width: 70vw;
+  align-items: center;
+  height: 58vh;
+}
+
+.secimg {
+  position: relative;
+}
+
+.secimg img {
+  width: 30vw;
+}
+
+.secimg video {
+  position: absolute;
+  width: 22vw;
+  top: 60px;
+  right: 53px;
+  z-index: -1;
+}
+
+
+
+section.first>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.first>div :nth-child(1) {
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.first>div :nth-child(2) {
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* section thord */
+.third {
+  height: 48vh;
+}
+
+
+/* faq section */
+.faq {
+  padding: 34px;
+}
+
+
+.faqbox {
+  background-color: #242323;
+  padding: 20px;
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto 1px;
+  max-width: 75vw;
+  transition: 0.8s;
+}
+
+.faqbox:hover {
+  background-color: #4d4d4d;
+}
+
+
+
+
+
+
+.faq h2 {
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  text-align: center;
+  padding: 12px;
+}
+
+.faqbox img {
+  filter: invert(100%);
+  width: 25px;
+}
+
+.watch  .recomendation {
+  font-size: 24px;
+  margin: 44px 212px;
+}
+.watch .main-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+}
+.watch .email-input{
+  width: 35%; 
+}
+
+
+/* Footer */
+footer{
+  color: rgba(255, 255, 255, 0.274);
+  margin: 80px auto 50px auto  ;
+  width: 50vw;
 
 }
+footer a {
+  color:#bbb0b0;
+  text-decoration: underline;
+  font-size: 14px;
+
+}
+.footer{
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr ;
+  margin: auto;
+  width: 50vw;
+}
+.footer-item{
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+}
+footer .btne2{
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  width: 90px;
+}
+
+/* footer div{
+  color: #bbb0b0;
+  text-decoration: underline;
+  margin: 31px 34px 18px 20px;
+} */
+footer .questions{
+  color: #bbb0b0;
+  text-decoration: underline;
+  padding: 34px 0px;
+} 
